@@ -1,0 +1,15 @@
+{
+  "name": "filmsuggestionwithai",
+  "version": "1.0.0",
+  "description": "AI-powered movie suggestion website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.2",
+    "dotenv": "^16.4.1",
+    "cors": "^2.8.5"
+  }
+} 
