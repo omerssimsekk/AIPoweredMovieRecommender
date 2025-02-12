@@ -14,18 +14,19 @@ A modern web application that provides intelligent movie recommendations using A
 
 ## How It Works
 
-1. **Input**: Enter the name of a movie you enjoy
-2. **AI Analysis**: The Deepseek AI analyzes your movie choice and finds similar movies based on:
-   - Thematic elements
-   - Storytelling style
-   - Visual atmosphere
-   - Plot similarities
-   - Genre elements
-3. **Movie Information**: The app fetches official movie posters and details from TMDB
-4. **Display**: Shows 10 movie recommendations with:
-   - Movie poster
-   - Title and release year
-   - Detailed explanation of similarities (revealed on hover)
+1. **Movie Search**: 
+   - Enter the name of a movie in the search bar
+   - Click search or press Enter
+
+2. **Behind the Scenes**:
+   - Deepseek AI generates 10 similar movie suggestions with explanations of why they're similar
+   - TMDB API fetches the movie posters for visual display
+
+3. **Results Display**:
+   - Each suggestion shows up as a card with:
+     - Movie poster from TMDB
+     - Movie title and release year
+     - Hover over a card to see why it's similar to your searched movie
 
 ## Setup
 
