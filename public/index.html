@@ -3,30 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Suggestion with AI</title>
+    <title>CineMatch - AI Movie Recommendations</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Movie Suggestion App</h1>
-        <div class="search-container">
-            <input type="text" id="movieInput" placeholder="Enter a movie you like...">
-            <button id="searchBtn">Search</button>
+    <div class="api-notification" id="apiNotification" style="display: none;">
+        <i class="fas fa-exclamation-triangle"></i>
+        <div class="notification-content">
+            <p><strong>API Key Notice:</strong> The Gemini API key is configured correctly.</p>
+            <p class="notification-details">The app is using AI-powered recommendations from Google Gemini.</p>
         </div>
-        
-        <div class="results">
-            <div class="input-movie" id="inputMovie">
-                <!-- Input movie details will be displayed here -->
+        <button id="closeNotification"><i class="fas fa-times"></i></button>
+    </div>
+
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-film"></i>
+                    <span>CineMatch</span>
+                </div>
+                <p class="tagline">Discover your next favorite movie</p>
             </div>
             
-            <div class="suggestions" id="suggestions">
-                <h2>Suggested Movies</h2>
-                <div class="suggestions-grid" id="suggestionsGrid">
-                    <!-- Suggested movies will be displayed here -->
+            <div class="featured-movies-ticker">
+                <div class="ticker-content" id="tickerContent">
+                    <!-- Ticker content will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="movieInput" placeholder="Enter a movie you love...">
+                    <button id="searchBtn">
+                        <span>Find Movies</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <p class="search-hint">Try "Inception", "The Godfather", or "Parasite"</p>
+            </div>
+        </header>
+
+        <main class="content">
+            <div class="welcome-message" id="welcomeMessage">
+                <div class="welcome-icon">
+                    <i class="fas fa-ticket-alt"></i>
+                </div>
+                <h2>Welcome to CineMatch</h2>
+                <p>Enter your favorite movie above and our AI will find your next cinematic adventure.</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-robot"></i>
+                        <span>AI-Powered</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-photo-video"></i>
+                        <span>High-Quality Posters</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Detailed Info</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-container" id="resultsContainer" style="display: none;">
+                <div class="results-header">
+                    <h2>Movies Similar to <span id="searchedMovie"></span></h2>
+                    <p class="results-count">Showing <span id="resultsCount">0</span> recommendations</p>
+                </div>
+                
+                <div class="movies-grid" id="suggestionsGrid">
+                    <!-- Movie cards will be inserted here -->
+                </div>
+            </div>
+        </main>
+
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loader-container">
+                <div class="film-reel">
+                    <i class="fas fa-film"></i>
+                </div>
+                <p class="loading-text">Finding similar movies<span class="dots">...</span></p>
+            </div>
+        </div>
+
+        <div class="movie-detail-modal" id="movieDetailModal">
+            <div class="modal-content">
+                <button class="close-modal" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-body" id="modalBody">
+                    <!-- Movie details will be inserted here -->
                 </div>
             </div>
         </div>
+
+        <footer class="app-footer">
+            <p>&copy; 2024 CineMatch | Powered by <a href="https://www.themoviedb.org/" target="_blank">TMDB</a> and Google Gemini</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="footer-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="footer-link"><i class="fas fa-envelope"></i></a>
+            </div>
+        </footer>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html> 

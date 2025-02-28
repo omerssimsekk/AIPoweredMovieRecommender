@@ -1,79 +1,106 @@
-# AI-Powered Movie Recommendation App
+# CineMatch - AI Movie Recommendations
 
-A modern web application that provides intelligent movie recommendations using AI. When you input a movie you like, the app suggests 10 similar movies with detailed explanations of why they're similar, complete with movie posters and release years.
+CineMatch is an AI-powered movie recommendation web application that uses Google's Gemini 1.5 Flash API to suggest similar movies based on your input. The application provides detailed information about each suggested movie, including posters, trailers, cast information, and more.
+
+![CineMatch Screenshot](https://via.placeholder.com/800x450?text=CineMatch+Screenshot)
 
 ## Features
 
-- **AI-Powered Recommendations**: Uses the Deepseek AI model to generate intelligent movie suggestions based on themes, plot elements, style, and atmosphere
-- **Visual Movie Cards**: Displays movie suggestions with official posters from TMDB (The Movie Database)
-- **Interactive UI**: 
-  - Hover effects reveal detailed explanations
-  - Responsive grid layout adapts to different screen sizes
-  - Modern and clean design
-- **Real-time Search**: Instantly get recommendations for any movie you input
+- 🎬 AI-powered movie recommendations using Google's Gemini 1.5 Flash
+- 🔍 Search for any movie to find similar titles
+- 🌟 Detailed movie information including posters, backdrops, and ratings
+- 📱 Responsive design that works on desktop and mobile devices
+- 🎥 Direct links to trailers and TMDB pages
+- 🎞️ Scrolling ticker of popular movies for quick access
+- ✨ Beautiful animations and modern UI
 
-## How It Works
+## Installation
 
-1. **Input**: Enter the name of a movie you enjoy
-2. **AI Analysis**: The Deepseek AI analyzes your movie choice and finds similar movies based on:
-   - Thematic elements
-   - Storytelling style
-   - Visual atmosphere
-   - Plot similarities
-   - Genre elements
-3. **Movie Information**: The app fetches official movie posters and details from TMDB
-4. **Display**: Shows 10 movie recommendations with:
-   - Movie poster
-   - Title and release year
-   - Detailed explanation of similarities (revealed on hover)
+### Prerequisites
 
-## Setup
+- Node.js (v14 or higher)
+- API Keys:
+  - [Google Gemini API Key](https://ai.google.dev/)
+  - [TMDB API Key](https://www.themoviedb.org/documentation/api)
 
-1. Clone the repository
+### Setup
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/cinematch.git
+   cd cinematch
+   ```
+
 2. Install dependencies:
-   ```bash
+   ```
    npm install
    ```
 
-3. Create a `.env` file in the root directory with your API keys:
+3. Create a `.env` file in the root directory with the following variables:
    ```
-   DEEPSEEK_API_KEY=your_deepseek_api_key
+   GEMINI_API_KEY=your_gemini_api_key
    TMDB_API_KEY=your_tmdb_api_key
    PORT=3000
    ```
 
 4. Start the server:
-   ```bash
+   ```
    npm start
    ```
 
-5. Open `http://localhost:3000` in your browser
+5. Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
+
+## Usage
+
+1. **Browse Popular Movies**: The scrolling ticker at the top displays popular movies. Click on any movie to see details or search for similar titles.
+
+2. **Search for Movies**:
+   - Enter a movie title in the search box
+   - Click "Find Movies" or press Enter
+   - The app will display your searched movie and AI-suggested similar movies
+
+3. **Interact with Movie Cards**:
+   - Hover over any movie card to see a brief overview and action buttons
+   - Click on "Details" to see comprehensive information about a movie
+   - Click on "Trailer" to watch the movie trailer on YouTube
+
+4. **Movie Details**:
+   - The details modal shows the movie poster, backdrop, overview, cast, and more
+   - You can see why the AI recommended this movie
+   - Access external links to TMDB and YouTube
+
+
 
 ## Technologies Used
 
-- **Frontend**:
-  - HTML5
-  - CSS3 (with modern animations and transitions)
-  - JavaScript (Vanilla JS)
-- **Backend**:
-  - Node.js
-  - Express.js
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Backend**: Node.js, Express
 - **APIs**:
-  - Deepseek AI API for movie recommendations
-  - TMDB API for movie posters and information
+  - Google Gemini 2.0 Flash API for AI recommendations
+  - TMDB API for movie data and images
+- **Libraries**:
+  - @google/generative-ai
+  - axios
+  - dotenv
+  - cors
 
-## Dependencies
+## Development
 
-- express: ^4.18.2
-- axios: ^1.6.2
-- dotenv: ^16.4.1
-- cors: ^2.8.5
+To run the application in development mode with automatic restarts:
 
-## API Keys Required
+```
+npm run dev
+```
 
-- **Deepseek API Key**: For AI-powered movie recommendations
-- **TMDB API Key**: For fetching movie posters and information
+## License
 
-## Contributing
+MIT
 
-Feel free to submit issues and enhancement requests! 
+## Acknowledgements
+
+- Movie data provided by [The Movie Database (TMDB)](https://www.themoviedb.org/)
+- AI recommendations powered by [Google Gemini](https://ai.google.dev/)
+- Icons by [Font Awesome](https://fontawesome.com/) 
