@@ -2,7 +2,6 @@
 
 CineMatch is an AI-powered movie recommendation web application that uses Google's Gemini 1.5 Flash API to suggest similar movies based on your input. The application provides detailed information about each suggested movie, including posters, trailers, cast information, and more.
 
-![CineMatch Screenshot]
 
 ## Features
 
@@ -109,10 +108,10 @@ CineMatch is an AI-powered movie recommendation web application that uses Google
 
 ## Development
 
-To run the application in development mode with automatic restarts:
+To run the application in development mode :
 
 ```
-npm run dev
+npm start
 ```
 
 ### Making Changes
